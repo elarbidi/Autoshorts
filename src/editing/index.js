@@ -9,7 +9,7 @@ const log = require("../tools/printWithColors");
 
 
 
-async function editor(dname,audio,filter){
+async function editor(dname,audio,filter, i){
 
     try{        
         log("DECODING START ###....","yellow");
@@ -28,7 +28,7 @@ async function editor(dname,audio,filter){
         log("RENDRING FINISH SUCCESSFULLY [V]","green");
         log("Encoding START #####..","yellow");
         await exec(`ffmpeg -framerate 45 -i ${dname + "/edited"}/%d.png -c:v libx264 -r 45 ${dname + "/noAUD.mp4"}`);
-        await exec(`ffmpeg -i ${dname + "/noAUD.mp4"} -i ${dname}/../assets/audios/${audio}.mp3 -c copy -map 0:v -map 1:a -shortest ${dname + "/../final"}.mp4`);
+        await exec(`ffmpeg -i ${dname + "/noAUD.mp4"} -i ${dname}/../assets/audios/${audio}.mp3 -c copy -map 0:v -map 1:a -shortest ${dname + "/../final" + i}.mp4`);
         log("ENCODING FINISH SUCCESS FULLY [V]");
         log("CLEANING AND CLOSE.\nTHANK YOU FOR USING ME","bleu");
         await fextra.remove(dname);

@@ -1,1 +1,4 @@
 node_modules
+*.mp4
+videos
+tmp

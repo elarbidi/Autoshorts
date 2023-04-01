@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node ./src/index"
+    "start": "node ./src/index"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +18,8 @@
     "get-video-duration": "^4.1.0",
     "jimp": "^0.22.7",
     "puppeteer": "^19.8.2",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "shalk": "^0.0.1-security",
     "sharp": "^0.32.0"
   }
